@@ -48,15 +48,36 @@ struct EditProfileView: View {
                     Text("Weasel").tag("weasel")
                     Text("Puffer Fish").tag("puffer-fish")
                     Text("Snake").tag("snake")
-                })
+                    //Text("Deafult").tag("user1")
+                }).padding(.bottom, 10.0)
            
-            HStack{
-                Text("I like to be called:")
-                    .padding(.leading, 50.0)
-                TextField("Nickname", text: $nickNameField)
-            
-            }
             Spacer()
+            VStack{
+                Text("Name:").padding(.trailing, 308.0)
+                TextField("Enter", text: $nickNameField)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            } .padding(.trailing, 16.0)
+                .padding(.leading, 16.0)
+            
+            VStack{
+                Text("Status:").padding(.trailing, 304.0)
+                TextField("Enter", text: $nickNameField)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            } .padding(.trailing, 16.0)
+                .padding(.leading, 16.0)
+
+            VStack{
+                Text("Bio:").padding(.trailing, 308.0)
+                TextField("Enter", text: $nickNameField)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+            
+            } .padding(.trailing, 16.0)
+                .padding(.leading, 16.0)
+                .padding(.bottom, 20.0)
+            Spacer()
+            
         }
     }
 }

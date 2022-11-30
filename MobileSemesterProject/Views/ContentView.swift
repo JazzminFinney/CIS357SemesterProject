@@ -17,7 +17,7 @@ struct ContentView: View {
     
     let gradient = Gradient(colors: [.red, .purple])
     
-    @State private var selectedPfp: String = "user"
+    @State private var selectedPfp: String = "user1"
     @State private var nickNameField: String = "pal"
     
     var body: some View {
