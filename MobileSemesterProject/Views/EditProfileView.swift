@@ -19,13 +19,15 @@ struct EditProfileView: View {
     //make a default profile pic
     @Binding var selectedPfp: String
     @Binding var nickNameField: String
+    @Binding var statusField: String
+    @Binding var bioField: String
     
-    let gradient = Gradient(colors: [.white, .purple])
+    let gradient1 = Gradient(colors: [Color(.white), Color("P1")])
     
     var body: some View {
         
         ZStack{
-            
+
             VStack{
                 
                 Image(selectedPfp)
@@ -66,7 +68,7 @@ struct EditProfileView: View {
                 
                 VStack{
                     Text("Status:").padding(.trailing, 275.0)
-                    TextField("Enter", text: $nickNameField)
+                    TextField("Enter", text: $statusField)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
                 } .padding(.trailing, 16.0)
@@ -74,7 +76,7 @@ struct EditProfileView: View {
                 
                 VStack{
                     Text("Bio:").padding(.trailing, 300.0)
-                    TextField("Enter", text: $nickNameField)
+                    TextField("Enter", text: $bioField)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
                 } .padding(.trailing, 16.0)
@@ -82,15 +84,27 @@ struct EditProfileView: View {
                     .padding(.bottom, 20.0)
                 Spacer()
                 
+                Image("poker2")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 90, height: 90)
+                    .shadow(color: Color.black.opacity(0.2),
+                            radius: 10, x:0, y:5)
+                
             }
         }.padding()
-            .background(LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom))
+            .background(LinearGradient(gradient: gradient1, startPoint: .top, endPoint: .bottom))
+            
     }
     
 }
 
 struct EditProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfileView(selectedPfp: .constant("user"), nickNameField: .constant(""))
+        EditProfileView(
+            selectedPfp: .constant("user"),
+            nickNameField: .constant(""),
+            statusField: .constant(""),
+            bioField: .constant(""))
     }
 }

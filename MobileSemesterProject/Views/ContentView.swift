@@ -18,7 +18,9 @@ struct ContentView: View {
     let gradient = Gradient(colors: [.red, .purple])
     
     @State private var selectedPfp: String = "user1"
-    @State private var nickNameField: String = "pal"
+    @State private var nickNameField: String = "player"
+    @State private var statusField: String = ""
+    @State private var bioField: String = ""
     
     var body: some View {
         NavigationView{
@@ -43,7 +45,12 @@ struct ContentView: View {
                                 radius: 10, x:0, y:5)
                        // .padding()
                         .foregroundColor(.white)
-                    Text( nickNameField + "!").font(.system(size:35).bold())
+                    Text(nickNameField + "!").font(.system(size:35).bold())
+                        .foregroundColor(.white)
+                        .shadow(color: Color.black.opacity(0.2),
+                                radius: 10, x:0, y:5)
+                        .padding(.bottom, 10.0)
+                    Text("Today I'm feeling: " + statusField).font(.system(size:16).bold())
                         .foregroundColor(.white)
                         .shadow(color: Color.black.opacity(0.2),
                                 radius: 10, x:0, y:5)
@@ -117,7 +124,11 @@ struct ContentView: View {
                                 }),
                         trailing:
                             NavigationLink(
-                                destination: EditProfileView(selectedPfp: $selectedPfp, nickNameField: $nickNameField),
+                                destination: EditProfileView(selectedPfp: $selectedPfp, nickNameField: $nickNameField,
+                                    statusField:
+                                    $statusField,
+                                    bioField:
+                                    $bioField),
                                 label: {
                                     Image(systemName: "person")
                                         .foregroundColor(.white)
