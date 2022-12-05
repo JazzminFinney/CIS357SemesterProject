@@ -10,9 +10,8 @@ import SwiftUI
 struct LeaderboardView: View {
     
     @State private var selectedPfp: String = "user1"
-    
-    let gradient1 = Gradient(colors: [Color(.white), Color("P1")])
     @State private var nickNameField: String = "player"
+  
     
     var body: some View {
         ZStack{
