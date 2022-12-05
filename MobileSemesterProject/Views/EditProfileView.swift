@@ -14,7 +14,6 @@ import SwiftUI
 
 struct EditProfileView: View {
     
-    //HELLO ALL - this page is clearly unfinished, but I wanted to make a picker view to be able to select from a number of images as a profile pic (I just have random examples right now, but I will add real ones soon!) this is just to make sure the functionality worked. - Jazz
     
     //make a default profile pic
     @Binding var selectedPfp: String
