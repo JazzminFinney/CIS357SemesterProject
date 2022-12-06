@@ -80,7 +80,7 @@ struct EditProfileView: View {
                     
                 } .padding(.trailing, 16.0)
                     .padding(.leading, 16.0)
-                    .padding(.bottom, 20.0)
+                    .padding(.bottom, 50.0)
                 Spacer()
                 
                 Image("poker2")
