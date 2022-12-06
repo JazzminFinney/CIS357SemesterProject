@@ -50,7 +50,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .shadow(color: Color.black.opacity(0.2),
                                 radius: 10, x:0, y:5)
-                        .padding(.bottom, 10.0)
+                        .padding(.bottom, 5.0)
                     Text("Today I'm feeling: " + statusField).font(.system(size:16).bold())
                         .foregroundColor(.white)
                         .shadow(color: Color.black.opacity(0.2),
