@@ -13,6 +13,7 @@ struct SlotsGameView: View {
     @State var slot1 = 1
     @State var slot2 = 1
     @State var slot3 = 1
+    @Binding var playerToken: Int
     
     var body: some View {
         
@@ -52,6 +53,7 @@ struct SlotsGameView: View {
                 if slot1 == slot2 && slot2 == slot3 {
                     // Match
                     credits += 15
+                    playerToken += 1
                 }
                 else {
                     credits -= 5
@@ -73,6 +75,8 @@ struct SlotsGameView: View {
 
 struct SlotsGameView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SlotsGameView(
+            playerToken: .constant(0)
+        )
     }
 }

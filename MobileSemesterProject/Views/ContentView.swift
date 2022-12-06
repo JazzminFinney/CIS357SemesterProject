@@ -81,7 +81,7 @@ struct ContentView: View {
                     
                     HStack{
                         Spacer()
-                        NavigationLink(destination: SlotsGameView()){
+                        NavigationLink(destination: SlotsGameView(playerToken: $playerToken)){
                             Text("Slot Mania")
                                 .font(.system(size:20))
                                 .foregroundColor(.white)
