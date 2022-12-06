@@ -21,6 +21,7 @@ struct ContentView: View {
     @State private var nickNameField: String = "player"
     @State private var statusField: String = ""
     @State private var bioField: String = ""
+    @State private var playerToken: Int = 0
     
     var body: some View {
         NavigationView{
@@ -70,7 +71,7 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                                 .shadow(color: Color.black.opacity(0.3),
                                         radius: 10, x:0, y:5)
-                            Text("200").font(.system(size:32).bold()).fontWeight(.heavy).foregroundColor(Color(hue: 0.126, saturation: 0.741, brightness: 0.974))
+                            Text(String(playerToken)).font(.system(size:32).bold()).fontWeight(.heavy).foregroundColor(Color(hue: 0.126, saturation: 0.741, brightness: 0.974))
                                 .shadow(color: Color.black.opacity(0.25),
                                         radius: 10, x:0, y:0)
                         }
@@ -93,7 +94,7 @@ struct ContentView: View {
                                         radius: 10, x:0, y:8)
                         }
                         Spacer()
-                        NavigationLink(destination: WarGameView()){
+                        NavigationLink(destination: WarGameView(playerToken: $playerToken)){
                             Text("War Game")
                                 .font(.system(size:20))
                                 .foregroundColor(.white)

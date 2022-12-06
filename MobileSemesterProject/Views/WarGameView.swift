@@ -13,6 +13,7 @@ struct WarGameView: View {
     @State private var cpuCard = "card9"
     @State private var playerScore = 0
     @State private var cpuScore = 0
+    @Binding var playerToken: Int
     
     var body: some View {
         
@@ -49,6 +50,7 @@ struct WarGameView: View {
                     //Update the score
                     if playerRand > cpuRand{
                         playerScore += 1
+                        playerToken += 1
                     }
                     else if cpuRand > playerRand{
                         cpuScore += 1
@@ -93,6 +95,8 @@ struct WarGameView: View {
 
 struct WarGameView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WarGameView(
+            playerToken: .constant(0)
+        )
     }
 }
