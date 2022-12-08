@@ -11,6 +11,7 @@ struct LeaderboardView: View {
     
     @State private var selectedPfp: String = "user1"
     @State private var nickNameField: String = "player"
+    @State private var pToken: Int = 0
   
     
     var body: some View {
