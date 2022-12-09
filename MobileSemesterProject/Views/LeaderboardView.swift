@@ -33,22 +33,28 @@ struct LeaderboardView: View {
                         .shadow(color: Color.black.opacity(0.2),
                                 radius: 10, x:0, y:5)
                         .padding(.bottom, 10.0)
-                    Image(selectedPfp)
+                    Image("snake")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
                         .clipped()
                         .padding()
-                    Text(nickNameField).font(.system(size:25).bold())
-                        .foregroundColor(.white)
-                        .shadow(color: Color.black.opacity(0.2),
-                                radius: 10, x:0, y:5)
-                        .padding(.bottom, 10.0)
+                    VStack{
+                        Text("Sammity1999").font(.system(size:25).bold())
+                            .foregroundColor(.white)
+                            .shadow(color: Color.black.opacity(0.2),
+                                    radius: 10, x:0, y:5)
+                        Text("Hi, I'm Sam aka the g..").font(.system(size:15).bold())
+                            .foregroundColor(.white)
+                            .shadow(color: Color.black.opacity(0.2),
+                                    radius: 10, x:0, y:5)
+                            .padding(.bottom, 10.0)
+                    }
                     
                     Spacer()
                     
-                    Text("200").font(.system(size:25).bold()).fontWeight(.heavy).foregroundColor(Color(hue: 0.126, saturation: 0.741, brightness: 0.974))
+                    Text("576").font(.system(size:25).bold()).fontWeight(.heavy).foregroundColor(Color(hue: 0.126, saturation: 0.741, brightness: 0.974))
                         .shadow(color: Color.black.opacity(0.25),
                                 radius: 10, x:0, y:0)
                     
@@ -60,22 +66,32 @@ struct LeaderboardView: View {
                         .shadow(color: Color.black.opacity(0.2),
                                 radius: 10, x:0, y:5)
                         .padding(.bottom, 10.0)
-                    Image(selectedPfp)
+                    Image("weasel")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
                         .clipped()
                         .padding()
-                    Text(nickNameField).font(.system(size:25).bold())
-                        .foregroundColor(.white)
-                        .shadow(color: Color.black.opacity(0.2),
-                                radius: 10, x:0, y:5)
-                        .padding(.bottom, 10.0)
+                    VStack{
+                        HStack{
+                            Text("Martín02").font(.system(size:25).bold())
+                                .foregroundColor(.white)
+                                .shadow(color: Color.black.opacity(0.2),
+                                        radius: 10, x:0, y:5)
+                            Spacer()
+                        }
+
+                        Text("Check my twitch @Ma..").font(.system(size:15).bold())
+                            .foregroundColor(.white)
+                            .shadow(color: Color.black.opacity(0.2),
+                                    radius: 10, x:0, y:5)
+                            .padding(.bottom, 10.0)
+                    }
                     
                     Spacer()
                     
-                    Text("200").font(.system(size:25).bold()).fontWeight(.heavy).foregroundColor(Color(hue: 0.126, saturation: 0.741, brightness: 0.974))
+                    Text("334").font(.system(size:25).bold()).fontWeight(.heavy).foregroundColor(Color(hue: 0.126, saturation: 0.741, brightness: 0.974))
                         .shadow(color: Color.black.opacity(0.25),
                                 radius: 10, x:0, y:0)
                     
@@ -87,22 +103,34 @@ struct LeaderboardView: View {
                         .shadow(color: Color.black.opacity(0.2),
                                 radius: 10, x:0, y:5)
                         .padding(.bottom, 10.0)
-                    Image(selectedPfp)
+                    Image("dog2")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
                         .clipped()
                         .padding()
-                    Text(nickNameField).font(.system(size:25).bold())
-                        .foregroundColor(.white)
-                        .shadow(color: Color.black.opacity(0.2),
-                                radius: 10, x:0, y:5)
-                        .padding(.bottom, 10.0)
+                    VStack{
+                        HStack{
+                            Text("TopFlank").font(.system(size:25).bold())
+                                .foregroundColor(.white)
+                                .shadow(color: Color.black.opacity(0.2),
+                                        radius: 10, x:0, y:5)
+                            Spacer()
+                        }
+                        HStack{
+                            Text("#1 ranked Hanzo").font(.system(size:15).bold())
+                                .foregroundColor(.white)
+                                .shadow(color: Color.black.opacity(0.2),
+                                        radius: 10, x:0, y:5)
+                                .padding(.bottom, 10.0)
+                            Spacer()
+                        }
+                    }
                     
                     Spacer()
                     
-                    Text("200").font(.system(size:25).bold()).fontWeight(.heavy).foregroundColor(Color(hue: 0.126, saturation: 0.741, brightness: 0.974))
+                    Text("330").font(.system(size:25).bold()).fontWeight(.heavy).foregroundColor(Color(hue: 0.126, saturation: 0.741, brightness: 0.974))
                         .shadow(color: Color.black.opacity(0.25),
                                 radius: 10, x:0, y:0)
                     
@@ -114,14 +142,14 @@ struct LeaderboardView: View {
                         .shadow(color: Color.black.opacity(0.2),
                                 radius: 10, x:0, y:5)
                         .padding(.bottom, 10.0)
-                    Image(selectedPfp)
+                    Image("user1")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
                         .clipped()
                         .padding()
-                    Text(nickNameField).font(.system(size:25).bold())
+                    Text("user3645262").font(.system(size:25).bold())
                         .foregroundColor(.white)
                         .shadow(color: Color.black.opacity(0.2),
                                 radius: 10, x:0, y:5)
@@ -141,22 +169,28 @@ struct LeaderboardView: View {
                         .shadow(color: Color.black.opacity(0.2),
                                 radius: 10, x:0, y:5)
                         .padding(.bottom, 10.0)
-                    Image(selectedPfp)
+                    Image("cat")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 50, height: 50)
                         .clipShape(Circle())
                         .clipped()
                         .padding()
-                    Text(nickNameField).font(.system(size:25).bold())
-                        .foregroundColor(.white)
-                        .shadow(color: Color.black.opacity(0.2),
-                                radius: 10, x:0, y:5)
-                        .padding(.bottom, 10.0)
+                    VStack{
+                        Text("Glitzykitty_9").font(.system(size:25).bold())
+                            .foregroundColor(.white)
+                            .shadow(color: Color.black.opacity(0.2),
+                                    radius: 10, x:0, y:5)
+                        Text("14 y/o AHS Cheer! :)").font(.system(size:15).bold())
+                            .foregroundColor(.white)
+                            .shadow(color: Color.black.opacity(0.2),
+                                    radius: 10, x:0, y:5)
+                            .padding(.bottom, 10.0)
+                    }
                     
                     Spacer()
                     
-                    Text("200").font(.system(size:25).bold()).fontWeight(.heavy).foregroundColor(Color(hue: 0.126, saturation: 0.741, brightness: 0.974))
+                    Text("13").font(.system(size:25).bold()).fontWeight(.heavy).foregroundColor(Color(hue: 0.126, saturation: 0.741, brightness: 0.974))
                         .shadow(color: Color.black.opacity(0.25),
                                 radius: 10, x:0, y:0)
                     
