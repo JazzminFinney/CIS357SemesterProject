@@ -145,7 +145,7 @@ struct ContentView: View {
                 .background(LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom))
                 
             }
-        }
+        }.accentColor(.black)
     }
 }
 
