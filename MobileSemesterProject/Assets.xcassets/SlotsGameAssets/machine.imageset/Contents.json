@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "dealbutton.png",
+      "filename" : "jackpot-machine.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "dealbutton@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "dealbutton@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
