@@ -9,26 +9,42 @@ import SwiftUI
 
 struct SlotsGameView: View {
     
-    @State var credits = 1000
+    @State var credits = 125
     @State var slot1 = 1
     @State var slot2 = 1
     @State var slot3 = 1
     @Binding var playerToken: Int
+    @State var modal1 = false
     
     var body: some View {
         ZStack{
             Spacer()
-            
             VStack(spacing: 20.0) {
+             
+                Image(systemName: "info.circle")
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .padding(.leading, 290.0)
+                    .padding(.bottom, 0.0)
+                    .shadow(color: Color.black.opacity(0.2),
+                            radius: 10, x:0, y:5)
+                    .onTapGesture {
+                        self.modal1.toggle()
+                    }.sheet(isPresented: $modal1){
+                        SlotsModalView()
+                    }
                 Spacer()
-                Text("Slots Game")
-                    .font(.system(size:35).bold())
-                        .foregroundColor(.black)
-                        .padding(.bottom, 5.0)
+                
+                Image("machine")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 140, height: 140)
+                    .shadow(color: Color.black.opacity(0.25),
+                            radius: 10, x:0, y:10)
                 Spacer()
                 
                 
-                Text("Credits \(credits)")
+                Text("Credits: \(credits)")
                 
                 HStack {
                     
@@ -45,7 +61,7 @@ struct SlotsGameView: View {
                         .aspectRatio(contentMode: .fit)
                 }
                 Spacer()
-                Button("Spin") {
+                Button("I'm feeling lucky") {
                     
                     // Randomize the numbers
                     slot1 = Int.random(in: 1...3)
@@ -56,7 +72,7 @@ struct SlotsGameView: View {
                     if slot1 == slot2 && slot2 == slot3 {
                         // Match
                         credits += 15
-                        playerToken += 1
+                        playerToken += 2
                     }
                     else {
                         credits -= 5
@@ -67,7 +83,7 @@ struct SlotsGameView: View {
                 // Then adjust the left and right padding to be bigger
                 .padding([.leading, .trailing], 40)
                 .foregroundColor(.white)
-                .background(Color(.systemPink))
+                .background(Color(red: 0.819, green: 0.008, blue: 0.247))
                 .cornerRadius(25)
                 .font(.system(size: 18, weight: .bold, design: .default))
                 Spacer()

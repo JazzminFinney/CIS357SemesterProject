@@ -18,6 +18,7 @@
 		44EA6BA9293595FC00F1FFB0 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EA6BA8293595FC00F1FFB0 /* LeaderboardView.swift */; };
 		44EA6BAE2935A87F00F1FFB0 /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EA6BAD2935A87F00F1FFB0 /* EditProfileModel.swift */; };
 		44F129242943DDA900D2D592 /* WarModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F129232943DDA900D2D592 /* WarModalView.swift */; };
+		44F129262943DDEE00D2D592 /* SlotsModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F129252943DDEE00D2D592 /* SlotsModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		44EA6BA8293595FC00F1FFB0 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		44EA6BAD2935A87F00F1FFB0 /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
 		44F129232943DDA900D2D592 /* WarModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarModalView.swift; sourceTree = "<group>"; };
+		44F129252943DDEE00D2D592 /* SlotsModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				44EA6B91293593E500F1FFB0 /* ContentView.swift */,
 				44F129232943DDA900D2D592 /* WarModalView.swift */,
+				44F129252943DDEE00D2D592 /* SlotsModalView.swift */,
 				44EA6BA12935955B00F1FFB0 /* WarGameView.swift */,
 				44EA6BA32935957900F1FFB0 /* SlotsGameView.swift */,
 				44EA6BA5293595AF00F1FFB0 /* EditProfileView.swift */,
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F129262943DDEE00D2D592 /* SlotsModalView.swift in Sources */,
 				44EA6BA6293595AF00F1FFB0 /* EditProfileView.swift in Sources */,
 				44EA6BA42935957900F1FFB0 /* SlotsGameView.swift in Sources */,
 				44EA6B92293593E500F1FFB0 /* ContentView.swift in Sources */,

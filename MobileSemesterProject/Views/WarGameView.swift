@@ -14,6 +14,8 @@ struct WarGameView: View {
     @State private var playerScore = 0
     @State private var cpuScore = 0
     @Binding var playerToken: Int
+    @State private var nickNameField: String = "You"
+    @State var modal = false
     
     var body: some View {
         
@@ -22,7 +24,25 @@ struct WarGameView: View {
             
             VStack {
                 Spacer()
-                Image("logo")
+                Image(systemName: "info.circle")
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .padding(.leading, 290.0)
+                    .shadow(color: Color.black.opacity(0.2),
+                            radius: 10, x:0, y:5)
+                    .onTapGesture {
+                        self.modal.toggle()
+                    }.sheet(isPresented: $modal){
+                        WarModalView()
+                    }
+                
+                Image("tank")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 140, height: 140)
+                    .padding(.top, 16.0)
+                    .shadow(color: Color.black.opacity(0.25),
+                            radius: 10, x:0, y:10)
                 Spacer()
                 HStack {
                     
@@ -58,7 +78,10 @@ struct WarGameView: View {
                     
                     
                 }, label: {
-                    Image("dealbutton")
+                    Image("poker-cards")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 120, height: 120)
                 })
                 
                 
@@ -67,16 +90,20 @@ struct WarGameView: View {
                     Spacer()
                     VStack {
                         
-                        Text("Player").padding(.bottom, 10.0).foregroundColor(.white).font(.headline)
+                        Text(nickNameField).font(.system(size:24).bold())
+                            .padding(.bottom, 2.0).foregroundColor(.white).font(.headline)
                         Text(String(playerScore)).foregroundColor(.white).font(.largeTitle)
+                            .padding(.bottom, 16.0)
                         
                     }
                     Spacer()
                     
                     VStack {
                         
-                        Text("CPU").padding(.bottom, 10.0).foregroundColor(.white).font(.headline)
+                        Text("CPU").font(.system(size:22).bold())
+                            .padding(.bottom, 2.0).foregroundColor(.white).font(.headline)
                         Text(String(cpuScore)).foregroundColor(.white).font(.largeTitle)
+                            .padding(.bottom, 16.0)
                         
                     }
                     Spacer()
