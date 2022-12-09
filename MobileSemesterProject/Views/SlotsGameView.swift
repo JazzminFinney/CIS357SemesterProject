@@ -15,6 +15,7 @@ struct SlotsGameView: View {
     @State var slot3 = 1
     @Binding var playerToken: Int
     @State var modal1 = false
+    @State var gained = 0
     
     var body: some View {
         ZStack{
@@ -44,7 +45,7 @@ struct SlotsGameView: View {
                 Spacer()
                 
                 
-                Text("Credits: \(credits)")
+                Text("Gained Token: \(gained)")
                 
                 HStack {
                     
@@ -71,12 +72,10 @@ struct SlotsGameView: View {
                     // Update credits based on match or not
                     if slot1 == slot2 && slot2 == slot3 {
                         // Match
-                        credits += 15
                         playerToken += 2
+                        gained += 2
                     }
-                    else {
-                        credits -= 5
-                    }
+
                 }
                 // Set padding for all edges
                 .padding()

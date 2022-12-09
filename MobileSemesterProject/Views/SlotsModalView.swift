@@ -54,7 +54,7 @@ struct SlotsModalView: View {
                     .padding([.leading, .trailing], 30)
                     .padding(.bottom, 10.0)
                 
-                Text("Remember- For every chance you take to spin, it will cost you 15 credits.").font(.system(size:25))
+                Text("Your gained tokens will also be shown above the three icons for your current game, but it will reset for each session.").font(.system(size:25))
                     .foregroundColor(.white)
                     .shadow(color: Color.black.opacity(0.2),
                             radius: 10, x:0, y:5)
